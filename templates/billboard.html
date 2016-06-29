@@ -1,0 +1,35 @@
+{% extends "bootstrapbase.html "%}
+
+{% block head %}
+  <title>2017台灣燈會在雲林</title>
+{% endblock %}
+
+{% block content %}
+  <div class="">
+  <h1>你這個臭鳥鳥</h1>
+
+  <table class="table table-striped>">
+  <thead>
+    <tr>
+
+      <th>標題</th>
+      <th>內容</th>
+      <th>地點</th>
+      <th>時間</th>
+    </tr>
+  </thead>
+
+  {% for post in post_list %}
+  <thead>
+  <tr>
+    <td><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></td>
+    <td>{{ post.content }}</td>
+    <td>{{ post.location }}</td>
+    <td>{{ post.created_at }}</td>
+  </tr>
+  </thead>
+  {% endfor %}
+  </table>
+
+  <em>{{ current_time }}</em>
+{% endblock %}

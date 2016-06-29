@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Index</title>
+  </head>
+  <body>
+    <h1>你這個臭鳥鳥</h1>
+    {% for post in post_list %}
+    <div>
+      <h3>tile:{{ post.title }}</h3>
+      <h3>{{ post.location }}</h3>
+      <h3>{{ post.content }}</h3>
+      <h3>{{ post.photo }}</h3>
+    </div>
+    {% endfor %}
+    <em>{{ current_time }}</em>
+  </body>
+
+</html>
